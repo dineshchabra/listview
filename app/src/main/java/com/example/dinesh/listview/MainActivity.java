@@ -16,7 +16,7 @@ public class MainActivity extends ListActivity {
         String[] values = new String[] { "DINESH", "KOVID", "NEERU",
                 "Manmohan", "Dubey", "Sushil", "Javed" };
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_list_item_1, values);
+                R.layout.rowlayout,R.id.label, values);
         setListAdapter(adapter);
     }
 
