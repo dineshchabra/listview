@@ -1,26 +1,31 @@
 package com.example.dinesh.listview;
 
-import android.app.ListActivity;
+import android.app.Activity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ListView;
-import android.widget.Toast;
 
-public class MainActivity extends ListActivity {
+
+import java.util.ArrayList;
+
+public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
 
-        String[] values = new String[] { "Dinesh", "Kovid", "Neeru",
-                "Manmohan", "Dubey", "Sushil", "Javed" };
-        SimpleArrayAdapter adapter = new SimpleArrayAdapter(this, values);
-        setListAdapter(adapter);
+        ArrayList<String> list = new ArrayList<>();
+
+        for(int i=1;i<=3;i++){
+            list.add("Dinesh");
+            list.add("Neeru");
+            list.add("kovid");
+        }
+
+        SimpleArrayAdapter adapter = new SimpleArrayAdapter(list,this);
+        ListView lview = (ListView) findViewById(R.id.view1);
+        lview.setAdapter(adapter);
     }
 
-    @Override
-    protected void onListItemClick(ListView l, View v, int position, long id) {
-        String item = (String) getListAdapter().getItem(position);
-        Toast.makeText(this, item + " selected", Toast.LENGTH_LONG).show();
-    }
+
 }

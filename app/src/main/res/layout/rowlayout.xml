@@ -1,27 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:padding="5dp" >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="64px"
-        android:layout_height="64px"
-        android:layout_marginLeft="10px"
-        android:layout_marginRight="10px"
-        android:layout_marginTop="5px"
-        android:src="@mipmap/ic_launcher_round" >
-    </ImageView>
+
 
     <TextView
-        android:id="@+id/label"
+        android:id="@+id/text1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@+id/label"
-        android:textSize="64px"
-        android:layout_marginLeft="5px"
-        android:textColor="@color/colorPrimary">
-    </TextView>
+        android:layout_weight="1"
+        android:text="Text-1" />
+
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Text-2" />
+
+    <Button
+        android:id="@+id/butt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Button-1" />
+
+    <Button
+        android:id="@+id/butt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Button-2" />
 
 </LinearLayout>
